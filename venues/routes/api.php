@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\VenueController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/reservations', [ReservationController::class, 'index']);
 Route::get('/reservations/{id}', [ReservationController::class, 'show']);
+
+Route::get('/venues', [VenueController::class, 'index']);
+Route::get('/venues/page', [VenueController::class, 'indexPaginate']);
+Route::get('/venues/{id}', [VenueController::class, 'show']);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
