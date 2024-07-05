@@ -33,6 +33,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', function (Request $request) {
         return auth()->user();
     });
+    Route::resource('/venues', VenueController::class)
+        ->only(['store', 'update', 'destroy']);
+
+    Route::resource('/reservations', ReservationController::class)
+        ->only(['store', 'update', 'destroy']);
 
 
     
