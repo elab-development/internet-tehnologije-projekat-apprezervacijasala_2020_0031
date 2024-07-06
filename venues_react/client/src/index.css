@@ -151,3 +151,40 @@ section {
   line-height: 8rem;
   font-weight: 900;
 }
+
+.styles {
+  background: var(--light-bg);
+}
+
+.styles .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.styles .box-container .box .image {
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.styles .box-container .box .image img {
+  object-fit: cover;
+}
+
+.styles .box-container .box .content {
+  text-align: center;
+}
+
+.styles .box-container .box .content .title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.styles .box-container .box .content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #444;
+  padding: 1rem 0;
+}
