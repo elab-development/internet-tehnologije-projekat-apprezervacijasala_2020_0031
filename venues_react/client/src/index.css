@@ -293,3 +293,160 @@ section {
   font-size: 1.5rem;
   color: var(--primary-color);
 }
+
+.services {
+  background-color: var(--main-color);
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.services .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.services .box-container .box:hover img {
+  transform: scale(1.1);
+}
+
+.services .box-container .box .content {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background: var(--dark-bg);
+}
+
+.services .box-container .box .content h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--white);
+  padding-top: 40rem;
+  text-transform: capitalize;
+}
+
+.services .box-container .box:hover .content {
+  display: flex;
+}
+
+.services-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.service-item {
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.first-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second-row {
+  margin-top: 5px;
+  border-top: 1px #2a201c solid;
+}
+
+.second-row p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.selected-service-item {
+  background-color: var(--hover);
+  color: white;
+}
+
+.heading-3 {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.date-picker {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-datepicker__input-container input {
+  width: 320px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.react-datepicker {
+  font-size: 1.2rem !important;
+}
+
+.coupon-field {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.coupon-field input {
+  width: calc(100% - 48px);
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.slots {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.slots button {
+  text-align: center;
+  font-size: 2rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 1.6rem;
+  width: 7rem;
+}
+
+.selected-slot {
+  background-color: var(--hover);
+  color: white;
+}
+
+.btn-book {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
