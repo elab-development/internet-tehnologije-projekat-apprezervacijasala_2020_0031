@@ -25,6 +25,7 @@ app.use('/api/reservations', reservationRouter);
 
 connect()
   .then(() => {
+    
     try {
       app.listen(port, () => {
         console.log(`Server started on port ${port}`);
